@@ -1,33 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import Carousel from './components/Carousel'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+        <h1>Eetu Turtiainen</h1>
+        <p>Web Developer</p>
+        <p>React / Typescript / NodeJS</p>
+      
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+
+      <div>
+        <h3>About me</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Montes nascetur ridiculus mus mauris. Sit amet dictum sit amet. 
+           Consequat id porta nibh venenatis. Porta nibh venenatis cras sed felis eget velit.
+            Elit ullamcorper dignissim cras tincidunt lobortis. 
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div>
+        <h3>Projects</h3>
+        <p>Here are some of my projects</p>
+        <Carousel images={["https://via.placeholder.com/200", "https://via.placeholder.com/150", "https://via.placeholder.com/150"]} />
+      </div>
+
+
     </>
   )
 }
