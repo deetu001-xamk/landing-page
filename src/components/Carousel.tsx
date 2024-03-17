@@ -1,8 +1,11 @@
 //Image carousel
-import React, {useState} from 'react';
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
+import { Box, Button, Container, Image, Icon } from '@chakra-ui/react';
+import {useState} from 'react';
 
 
 const Carousel = ({images}) => {
+    
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleNext = () => {
@@ -21,11 +24,28 @@ const Carousel = ({images}) => {
   
     return (
 
-        <div>
-            <button onClick={handlePrev}>Previous</button>
-            <img src={images[activeIndex]} alt="carousel" />
-            <button onClick={handleNext}>Next</button>
-        </div>
+        <Container style={{position: "relative"}}>
+            <Button style={{    position: "absolute", 
+                                left: -35,
+                                height: "100%"
+
+                            }} onClick={handlePrev}>
+                                <Icon as={ArrowLeftIcon} />
+                            </Button>
+            <Box> 
+                <Image src={images[activeIndex].src} alt="carousel" />
+            </Box>
+            <Button style={{    position: "absolute", 
+                                top : 0,
+                                right: -35,
+                                height: "100%"
+
+                            }} onClick={handlePrev}>
+                                <Icon as={ArrowRightIcon} />
+                            </Button>
+            <a style={{position: "absolute", width: "100%", bottom: -30, left: 0}} href={images[activeIndex].link}>Open the project</a>
+
+        </Container>
   )
 }
 
