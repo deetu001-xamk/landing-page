@@ -2,7 +2,6 @@ import { Text, Button, Container, Heading, Icon, useColorMode } from '@chakra-ui
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import './App.css'
 import Carousel from './components/Carousel'
-import photo from './assets/photos/1.png'
 
 
 interface Image {
